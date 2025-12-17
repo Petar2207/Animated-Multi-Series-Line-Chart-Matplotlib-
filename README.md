@@ -48,16 +48,13 @@ This version extends the base animation with **explicit zero-line handling**, so
   - Data ranges from **−10 to +10**
   - Matplotlib would normally hide the zero line
 
-This guarantees that **zero is always visually represented**, even if it is not part of the tick grid.
-- Zero is treated as a **semantic reference point**, not just a tick
-
 This version extends the original animated line chart by introducing a
 **categorical time axis**, **equal spacing between labels**, and a
 **static data point that appears only at the final frame**.
 
-It is designed for **years, months, quarters, or any non-numeric timeline**
+It is designed for *years, months, quarters, or any non-numeric timeline*
 where spacing must remain consistent regardless of label values.
----
+
 
 ---
 
