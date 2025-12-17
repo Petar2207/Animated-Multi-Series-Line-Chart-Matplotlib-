@@ -1,44 +1,77 @@
-# 📈 Animated Multi-Series Line Chart (Matplotlib)
+# 📈 Animated Line Graphs (Matplotlib · Jupyter Notebook)
 
-This project creates a **smooth, time-based animated line chart** using **Matplotlib** and **NumPy**.  
-It visualizes four data series across multiple years with interpolated motion, moving markers, and a pause at the final frame.
+This repository contains **animated line graph examples** built with **Matplotlib** and **NumPy**, designed for **presentation-ready data visualizations** in **Jupyter Notebook**.
 
-The animation can be:
-- Displayed inline in **Jupyter Notebook**
-- Exported as a **GIF**
-- Exported as an **MP4 video**
+The notebooks demonstrate two versions of the same animated line chart:
 
----
+1. A **standard 0–100 animated line graph**
+2. An ** version with negative-value support and a forced bold zero line**
 
-## ✨ Features
+## 📂 Repository Contents
+├── line_graph_100_animated.ipynb
+└── hard_line_0__line_graph_100_animated.ipynb
 
-- Smooth interpolation between yearly data points
-- Multiple animated series with distinct styles
-- Moving highlight markers for each series
-- Custom grid, axis formatting, and background styling
-- Configurable animation speed and pause duration
-- Supports HTML5 video preview, GIF, and MP4 export
 
 ---
 
-## 📊 Data Overview
+## 1️⃣ `line_graph_100_animated.ipynb`
 
-The animation visualizes four example time series:
+### Base Animated Line Graph
 
-| Series | Description |
-|------|------------|
-| Series A | Steady long-term growth |
-| Series B | Decline followed by recovery |
-| Series C | Volatile pattern |
-| Series D | Stable market leader |
+### Description
+This notebook implements a **standard animated line chart** where values range from **0 to 100**.
 
-Years displayed: **2018 – 2025**
+### Features
+- Smooth animated transitions between data points  
+- Multiple data series  
+- Styled markers and grid  
+- Final-frame pause for emphasis  
+- Clean, presentation-ready visuals  
+
+
+## 2️⃣ `hard_line_0__line_graph_100_animated.ipynb`
+
+### Animated Line Graph (Hard Zero Line)
+
+### What Makes It Different
+This version extends the base animation with **explicit zero-line handling**, solving a common Matplotlib limitation, categorical Timeline Version, One static data point revealed only at the final frame.
 
 ---
 
-## 🛠 Requirements
+### ⭐ Key Advanced Features
 
-Make sure you have the following installed:
+#### ✅ Forced Bold Zero Line
+- A **bold horizontal line at `y = 0` is always drawn**
+- The zero line appears **even if `0` is not part of the axis tick range**
+- Works even when:
+  - Tick spacing skips zero (example: spacing of 20)
+  - Data ranges from **−10 to +10**
+  - Matplotlib would normally hide the zero line
 
-```bash
-pip install numpy matplotlib
+This guarantees that **zero is always visually represented**, even if it is not part of the tick grid.
+- Zero is treated as a **semantic reference point**, not just a tick
+
+This version extends the original animated line chart by introducing a
+**categorical time axis**, **equal spacing between labels**, and a
+**static data point that appears only at the final frame**.
+
+It is designed for **years, months, quarters, or any non-numeric timeline**
+where spacing must remain consistent regardless of label values.
+---
+
+---
+
+## ▶️ How to Run
+
+1. Open a notebook in **Jupyter**
+2. Run all cells
+3. View the animation inline
+4. (Optional) Export as GIF or MP4 if enabled in the notebook
+
+
+---
+
+## 📜 License
+
+MIT License — free to use, modify, and distribute.
+
